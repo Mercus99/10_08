@@ -13,7 +13,7 @@ class HangmanTests(unittest.TestCase):
         word = 'a'
         expected = []
         # When
-        actual = get_all_index(text,word)
+        actual = get_all_index(text, word)
         # Then
         self.assertEqual(expected, actual)
 
@@ -23,19 +23,19 @@ class HangmanTests(unittest.TestCase):
         word = 'a'
         expected = [0]
         # When
-        actual = get_all_index(text,word)
+        actual = get_all_index(text, word)
         # Then
-        self.assertEqual(expected,actual)
+        self.assertEqual(expected, actual)
 
     def test_get_all_index_should_return_two_and_three_for_letter_l_in_word_hello(self):
         # Given
         text = 'l'
         word = 'hello'
-        expected = [2,3]
+        expected = [2, 3]
         # When
-        actual = get_all_index(text,word)
+        actual = get_all_index(text, word)
         # Then
-        self.assertEqual(expected,actual)
+        self.assertEqual(expected, actual)
 
     def test_get_all_index_should_raise_value_error_if_text_is_empty(self):
         # Given
@@ -43,7 +43,7 @@ class HangmanTests(unittest.TestCase):
         word = 'hello'
         # When Then
         with self.assertRaises(ValueError):
-            get_all_index(text,word)
+            get_all_index(text, word)
 
     def test_get_all_index_should_raise_value_error_if_text_is_longer_than_one_character(self):
         # Given
@@ -51,7 +51,7 @@ class HangmanTests(unittest.TestCase):
         word = 'hello'
         # When Then
         with self.assertRaises(ValueError):
-            get_all_index(text,word)
+            get_all_index(text, word)
 
     # def test_get_all_index_should_raise_type_error_it_text_is_integer(self):
     #     # Given
